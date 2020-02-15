@@ -1,0 +1,9 @@
+## Interface: 11302
+
+## Title: No Offence Raid Loot
+## Author: markus101
+## Version: v0.1
+## X-Date: 2020-02-13
+
+NoOffenseRaidLootData.lua
+NoOffenseRaidLoot.lua
