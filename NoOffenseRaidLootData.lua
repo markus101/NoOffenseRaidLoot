@@ -201,7 +201,7 @@ NoOffenseRaidLoot.items = {
   ["Mind Quickening Gem"] = {["bisFor"] = "Mage", ["gp"] = 80},
   ["Mish'undare, Circlet of the Mind Flayer"] = {["bisFor"] = "Shadow Priest, Mage, Warlock, Holy Pally (2)", ["gp"] = 60},
   ["Neltharion's Tear"] = {["bisFor"] = "Shadow Priest, Mage, Warlock", ["gp"] = 80},
-  ["Nemesis Belt"] = {["bisFor"] = "Warlock", ["gp"] = 40},
+  ["Nemesis Belt"] = {["bisFor"] = "", ["gp"] = 40},
   ["Nemesis Boots"] = {["bisFor"] = "", ["gp"] = 40},
   ["Nemesis Bracers"] = {["bisFor"] = "", ["gp"] = 40},
   ["Nemesis Gloves"] = {["bisFor"] = "", ["gp"] = 40},
