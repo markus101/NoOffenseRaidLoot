@@ -6,8 +6,7 @@ This WoW Classic Addon will show relevant information to to ingame tooltips for 
 
 ## Installing Addon
 
-1. Click `Clone or download`
-1. Click `Download ZIP`
+1. [Download ZIP](https://github.com/markus101/NoOffenseRaidLoot/archive/master.zip)
 1. Extract ZIP
 1. Rename `NoOffenseRaidLoot-master` to `NoOffenseRaidLoot`
 1. Copy/Move `NoOffenseRaidLoot` folder to in `World of Warcraft\_classic_\Interface\AddOns\`
