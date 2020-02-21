@@ -6,7 +6,8 @@ local valueRed = 255/255
 local valueGreen = 210/255
 local valueBlue = 0/255
 
-local isTooltipDone
+local isGameTooltipDone
+local isItemRefTooltipDone
 
 local function ProcessTooltip(tooltip, link)
 	-- SendChatMessage("Showing Tooltip", "PARTY"); -- DEBUG
@@ -43,16 +44,11 @@ local function ProcessTooltip(tooltip, link)
 	tooltip:AddLine(" ")
 	tooltip:AddDoubleLine('NO BIS: ', bisFor, labelRed, labelGreen, labelBlue, valueRed, valueGreen, valueBlue)
 	tooltip:AddDoubleLine('NO GP: ', raidItem.gp, labelRed, labelGreen, labelBlue, valueRed, valueGreen, valueBlue)
-	-- tooltip:Show()
-end
-
-local function GameTooltip_OnTooltipShow(tooltip, ...)
-	GameTooltip:Show()
 end
 
 local function GameTooltip_OnTooltipSetItem(tooltip, ...)
-	if (not isTooltipDone) and tooltip then
-		isTooltipDone = true
+	if (not isGameTooltipDone) and tooltip then
+		isGameTooltipDone = true
 
 		local name, link = tooltip:GetItem()
 		
@@ -63,17 +59,13 @@ local function GameTooltip_OnTooltipSetItem(tooltip, ...)
 end
 
 local function GameTooltip_OnTooltipCleared(tooltip, ...)
-	isTooltipDone = nil
-end
-
-local function ItemRefTooltip_OnTooltipShow(tooltip, ...)
-	ItemRefTooltip:Show()
+	isGameTooltipDone = nil
 end
 
 local function ItemRefTooltip_OnTooltipSetItem(tooltip, ...)
-	if (not isTooltipDone) and tooltip then
+	if (not isItemRefTooltipDone) and tooltip then
 		local _, link = tooltip:GetItem()
-		isTooltipDone = true
+		isItemRefTooltipDone = true
 		if link then
 			ProcessTooltip(tooltip, link)
 		end
@@ -81,13 +73,11 @@ local function ItemRefTooltip_OnTooltipSetItem(tooltip, ...)
 end
 
 local function ItemRefTooltip_OnTooltipCleared(tooltip, ...)
-	isTooltipDone = nil
+	isItemRefTooltipDone = nil
 end
 
-GameTooltip:HookScript("OnShow", GameTooltip_OnTooltipShow)
 GameTooltip:HookScript("OnTooltipSetItem", GameTooltip_OnTooltipSetItem)
 GameTooltip:HookScript("OnTooltipCleared", GameTooltip_OnTooltipCleared)
 
-ItemRefTooltip:HookScript("OnShow", ItemRefTooltip_OnTooltipShow)
 ItemRefTooltip:HookScript("OnTooltipSetItem", ItemRefTooltip_OnTooltipSetItem)
 ItemRefTooltip:HookScript("OnTooltipCleared", ItemRefTooltip_OnTooltipCleared)
