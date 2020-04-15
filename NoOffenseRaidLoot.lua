@@ -36,6 +36,7 @@ local function ProcessTooltip(tooltip, link)
 	if not raidItem then return; end
 
 	local bisFor = raidItem.bisFor
+	local note = raidItem.note
 
 	if bisFor == "" then
 		bisFor = 'None'
@@ -44,6 +45,10 @@ local function ProcessTooltip(tooltip, link)
 	tooltip:AddLine(" ")
 	tooltip:AddDoubleLine('NO BIS: ', bisFor, labelRed, labelGreen, labelBlue, valueRed, valueGreen, valueBlue)
 	tooltip:AddDoubleLine('NO GP: ', raidItem.gp, labelRed, labelGreen, labelBlue, valueRed, valueGreen, valueBlue)
+
+	if note ~= nil and note ~= "" then
+		tooltip:AddDoubleLine('NO Note: ', note, labelRed, labelGreen, labelBlue, valueRed, valueGreen, valueBlue)
+	end
 end
 
 local function GameTooltip_OnTooltipSetItem(tooltip, ...)
