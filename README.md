@@ -11,9 +11,3 @@ This WoW Classic Addon will show relevant information to to ingame tooltips for 
 1. Rename `NoOffenseRaidLoot-master` to `NoOffenseRaidLoot`
 1. Copy/Move `NoOffenseRaidLoot` folder to in `World of Warcraft\_classic_\Interface\AddOns\`
 1. Restart/run WoW
-
-## Updating Data
-
-1. Go to `No Offense Classic Data` Google sheet
-1. Copy data from `LootTableAddonData` sheet
-1. Paste into `NoOffenseRaidLootData.lua`
