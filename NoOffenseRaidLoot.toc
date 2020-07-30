@@ -2,8 +2,8 @@
 
 ## Title: No Offense Raid Loot
 ## Author: markus101
-## Version: v0.8
-## X-Date: 2020-07-28
+## Version: v0.9
+## X-Date: 2020-07-30
 
 NoOffenseRaidLootData.lua
 NoOffenseRaidLoot.lua
